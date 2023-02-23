@@ -1,0 +1,714 @@
+{
+	"info": {
+		"_postman_id": "8d5f8a60-fc75-4f74-8a1a-7674615a639d",
+		"name": "PRIMER-PROYECTO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CUSTOMER",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "Registrar cliente",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeCustomer\": \"N\",\r\n    \"numberDocument\": \"6634454544554we5667\",\r\n    \"name\": \"ejemplo\",\r\n    \"lastname\": \"juan\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9279/api/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9279",
+									"path": [
+										"api",
+										"customer"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Cliente",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeCustomer\": \"N\",\r\n    \"numberDocument\": \"6634454544554we5667\",\r\n    \"name\": \"TEST\",\r\n    \"lastname\": \"TEST\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9279/api/customer/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9279",
+									"path": [
+										"api",
+										"customer",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9279/api/customer/3",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9279",
+									"path": [
+										"api",
+										"customer",
+										"3"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar cliente",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9279/api/customer/9",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9279",
+									"path": [
+										"api",
+										"customer",
+										"9"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cliente x Documento",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"typeCustomer\": \"N\",\r\n    \"numberDocument\": \"6634454544554we5667\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9279/api/customer",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9279",
+									"path": [
+										"api",
+										"customer"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "OPERATION",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "Registrar Cuenta",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"flag_creation\" : \"C\",\r\n\"description\" : \"CREDITO\",\r\n\"current_amount\" : \"50\",\r\n\"starting_amount\" : \"7000\",\r\n\"flag_account\" : \"P\",\r\n\"startdate\" : \"15/02/2023\",\r\n\"courtdate\" : \"01/03/2023\",   \r\n\"quota\" : \"5\",\r\n\"paymentdate\" : \"500\",\r\n\"customerRequest\" : { \"typeCustomer\": \"P\",\r\n                    \"numberDocument\": \"69852314\",\r\n                            \"name\": \"LUIS\",\r\n                        \"lastname\": \"PERALDA\"\r\n\r\n\r\n},\r\n\"bankCardRequest\" : {  \"cardnumber\": \"8648125482846699\",\r\n                        \"pin\": 2428,\r\n                        \"duedate\": \"01/06/2023\",\r\n                        \"validationcode\": 555\r\n\r\n\r\n\t\t\t\t\t}\r\n  \r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9385/api/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar Cuenta",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\"flag_creation\" : \"TC\",\r\n\"current_amount\" : \"50\",\r\n\"starting_amount\" : \"9000\",\r\n\"description\" : \"TARJETA DE CREDITO\",\r\n\"flag_account\" : \"P\",\r\n\"startdate\" : \"15/02/2025\",\r\n\"courtdate\" : \"01/03/2025\",   \r\n\"quota\" : \"5\",\r\n\"paymentdate\" : \"500\",\r\n\"customerRequest\" : { \"typeCustomer\": \"P\",\r\n\t\t\t\t\t\"numberDocument\":\"12345786\",\r\n\t\t\t\t\t\t\t  \"name\":\"Vic\",\r\n\t\t\t\t\t\t  \"lastname\":\"Testing\"\r\n\r\n\r\n},\r\n\"bankCardRequest\" : {\"cardnumber\": \"5421856974523618\",\r\n\t\t\t\t\t \"pin\": 123,\r\n\t\t\t\t\t \"duedate\": \"25/02/2022\",\r\n\t\t\t\t\t \"validationcode\": 123\r\n\t\t\t\t\t}\r\n  \r\n\r\n\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9385/api/account/2",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"account",
+										"2"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Productos por cliente",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9385/api/account/products/4/true",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"account",
+										"products",
+										"4",
+										"true"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Lista de Cuenta",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9385/api/account",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"account"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Cuenta",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9385/api/account/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"account",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar Cuenta",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9385/api/account/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"account",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registrar Operaciones",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"ammount\": 45,\r\n    \"flagdDescription\": \"R\",\r\n    \"description\": \"Transferencia\",\r\n    \"idAccountCustomer\": 1,\r\n    \"idAccountCustomerDestiny\": 3\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9385/api/operation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"operation"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener Operacion",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:9385/api/operation/R",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"operation",
+										"R"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Obtener lista de operacion",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "http://localhost:9385/api/operation",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9385",
+									"path": [
+										"api",
+										"operation"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "BANKCARD",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "Registrar-Tarjeta",
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "default",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"cardnumber\":\"4854125742585\",\r\n    \"pin\":2432,\r\n    \"duedate\":\"01/08/2023\",\r\n    \"validationcode\":589\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9280/api/bankcard",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9280",
+									"path": [
+										"api",
+										"bankcard"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Tarjeta x numero",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{ \r\n    \"cardnumber\":\"4854125742585\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:9280/api/bankcard",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9280",
+									"path": [
+										"api",
+										"bankcard"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "Registra Usuario -Clave Web",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \r\n    \"idcustomer\" : 1,\r\n    \"idcard\" : 5,\r\n    \"pin\" : 2428,\r\n    \"cardnumber\" : \"4848125482846699\",\r\n    \"password\" : \"123456\"    \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5080/api/user",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5080",
+									"path": [
+										"api",
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validacion de Usuario - Tarjeta",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5080/api/user/4848125482846699",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5080",
+									"path": [
+										"api",
+										"user",
+										"4848125482846699"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Validacion de Usuario -  Cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5080/api/user/P/44552244",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5080",
+									"path": [
+										"api",
+										"user",
+										"P",
+										"44552244"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualizar clave Web -Usuario",
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{  \r\n    \"password\" : \"111111\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5080/api/user/63f4feca153c8071a01c1763",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5080",
+									"path": [
+										"api",
+										"user",
+										"63f4feca153c8071a01c1763"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar usuario no vigentes",
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5080/api/user/63f4feca153c8071a01c1763",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5080",
+									"path": [
+										"api",
+										"user",
+										"63f4feca153c8071a01c1763"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Acceso al Multicanal",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5080/api/user/acceso/4848125482846699/111111",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5080",
+									"path": [
+										"api",
+										"user",
+										"acceso",
+										"4848125482846699",
+										"111111"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "AUDIT",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "Listar todas las auditorias",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5089/api/audit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5089",
+									"path": [
+										"api",
+										"audit"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Registar auditoria",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"aplicacion\": \"testuse123r\",\r\n    \"usuarioAplicacion\": \"testuser00\",\r\n    \"usuarioSesion\":\"usuarioSesion00\",\r\n    \"codigoTransaccion\":\"321654897\",\r\n    \"fechaTransaccion\":\"25/03/2023\",\r\n    \"mensaje\" : \"kksakakak\",\r\n    \"request\" : \"requesss : skdkdkdkd\",\r\n    \"response\" : \" response : jajajajj\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:5089/api/audit",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5089",
+									"path": [
+										"api",
+										"audit"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "INFORMATION",
+			"item": [
+				{
+					"name": "LOCAL",
+					"item": [
+						{
+							"name": "productos por cliente",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:5075/api/information/4",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "5075",
+									"path": [
+										"api",
+										"information",
+										"4"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
